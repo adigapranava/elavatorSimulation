@@ -1,0 +1,53 @@
+.lift-passage{
+    position: relative;
+    margin-top: 2rem;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.passage{
+    background-color: #adbee29a;
+    margin-left: 2px;
+    width: 8rem;
+}
+
+.buttons{
+    background-color: #adbee2;
+    margin-right: 2px;
+    padding: 2px;
+    width: 12rem;
+}
+
+.floor-buttons button{
+    height: 85%;
+    font-size: 20px;
+}
+
+.floor-buttons input{
+    height: 70%;
+    width: 3rem;
+}
+
+
+.floor-buttons{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    height: 50px;
+    margin: 1px;
+}
+
+.btn-pressed{
+    /* background-color: rgb(122, 126, 124); */
+    border: 2px solid #dd0011;
+    color: #dd0011;
+}
+
+.lift-floor{
+    height: 50px;
+    margin: 1px;
+    background-color: #373d49a2;
+}
+
+.lift-here{
+    background-color: #dd0011;
+}
