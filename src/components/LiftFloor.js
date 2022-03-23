@@ -1,7 +1,6 @@
 function LiftFloor({arrived, liftHere}) {
     return (
-        <div className={liftHere ? "lift-floor lift-here": "lift-floor"}>
-            {arrived ? <div><input type="text"></input><button>submit</button></div>: <></>}
+        <div className={arrived ? "lift-floor arrived": (liftHere ? "lift-floor lift-here": "lift-floor")}>
         </div>
     );
 }

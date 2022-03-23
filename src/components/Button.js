@@ -2,10 +2,23 @@ import {MdExpandLess, MdExpandMore} from 'react-icons/md'
 import { useState } from 'react';
 import { useEffect } from 'react';
 
-const Button = ({floorNumber, totalFloors, getRequest}) => {
+const Button = ({floorNumber, totalFloors, getRequest, arrived, nextFloor}) => {
     const [up, setUp] = useState(false);
     const [down, setDown] = useState(false);
     const [ip, setIp] = useState(NaN);
+
+    useEffect(()=>{
+        if(arrived){
+            if(nextFloor && nextFloor > floorNumber){
+                setUp(false);
+                setIp(NaN);
+            }else if(nextFloor){
+                setDown(false);
+                setIp(NaN);
+            }
+        }
+    }, [arrived, nextFloor])
+
     useEffect(()=>{
         if(up)
             // true means up

@@ -1,14 +1,14 @@
 import '../Styles/LiftPassage.css'
 import LiftFloor from './LiftFloor';
 
-const LiftPassage = ({noOfFoors, liftPos }) => {
+const LiftPassage = ({noOfFoors, liftPos , arrived}) => {
     let renderFloors = ()=>{
         var rows = [];
         for(var i=0; i<noOfFoors; i++){
             rows.push(
                 <LiftFloor 
                     key={i}  
-                    arrived={false}
+                    arrived={arrived== noOfFoors-1-i}
                     liftHere={noOfFoors-1-i == liftPos}
                     />)
         }
