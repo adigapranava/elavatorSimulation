@@ -5,26 +5,26 @@ import Buttons from './components/Buttons';
 
 function App() {
   const numberOfElevators = 3;
-  const noOfFloors = 21;
+  const noOfFloors = 15;
   const [lift1, setLift1] = useState(0);
 
   // direction == True =>up else down
-  const getRequest = (floorNumber, direction)=>{
-    
+  const getRequest = (floorNumber, direction, destination)=>{
+    console.log("request from", floorNumber, "to", destination);
   }
 
   // useEffect(()=>{
   //   if(lift1)
   // }, [lift1])
 
-  useEffect(()=>{
-      const interval = setInterval(()=>{
-        setLift1((lift1) => (lift1+1)%noOfFloors);
-        console.log("sdcsd alsckad", lift1);
-      }, 3000); 
+  // useEffect(()=>{
+  //     const interval = setInterval(()=>{
+  //       setLift1((lift1) => (lift1+1)%noOfFloors);
+  //       console.log("sdcsd alsckad", lift1);
+  //     }, 3000); 
 
-      return ()=> clearInterval(interval);
-  },[])
+  //     return ()=> clearInterval(interval);
+  // },[])
   // let renderElevators = ()=>{
 
   //   var rows = [];

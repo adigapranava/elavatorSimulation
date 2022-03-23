@@ -5,29 +5,29 @@ import { useEffect } from 'react';
 const Button = ({floorNumber, totalFloors, getRequest}) => {
     const [up, setUp] = useState(false);
     const [down, setDown] = useState(false);
-    const [ip, setIp] = useState(null);
+    const [ip, setIp] = useState(NaN);
     useEffect(()=>{
         if(up)
             // true means up
-            getRequest(floorNumber, true);
+            getRequest(floorNumber, true, ip);
         else if (down) {
             // true means down
-            getRequest(floorNumber, false)
+            getRequest(floorNumber, false, ip)
         }
     }, [up, down])
 
     return (
         <div className='floor-buttons'>
             <p className='floor-number'>{floorNumber < 10 ? "0"+floorNumber : floorNumber}</p>
-            <input type='number' max={totalFloors} min={0} value={ip} onChange={(e)=>setIp(parseInt(e.target.value))}/>
+            <input type='number'value={ip} onChange={(e)=>setIp(parseInt(e.target.value))}/>
             <button type='button' 
                 disabled={floorNumber == totalFloors}
                 className={ up ? 'btn-pressed':'' } 
                 onClick={()=>{
-                    if(ip != null && ip > floorNumber && ip < totalFloors)
+                    if(ip != NaN && ip > floorNumber && ip <= totalFloors)
                         setUp(true);
                     else
-                        setIp((p)=>null);
+                        setIp(NaN);
                     }}>
                     <MdExpandLess/>
             </button>
@@ -36,10 +36,10 @@ const Button = ({floorNumber, totalFloors, getRequest}) => {
                 disabled={floorNumber==0 }
                 className={ down ? 'btn-pressed':'' } 
                 onClick={()=>{
-                    if(ip != null && ip < floorNumber && ip > 0)
+                    if(ip != NaN && ip < floorNumber && ip >= 0)
                         setDown(true);
                     else
-                        setIp((p)=>null);
+                        setIp(NaN);
                     }}>
                     <MdExpandMore/>
             </button>
