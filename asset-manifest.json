@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/elavatorSimulation/static/css/main.773c977c.css",
+    "main.js": "/elavatorSimulation/static/js/main.d16fb773.js",
+    "index.html": "/elavatorSimulation/index.html",
+    "main.773c977c.css.map": "/elavatorSimulation/static/css/main.773c977c.css.map",
+    "main.d16fb773.js.map": "/elavatorSimulation/static/js/main.d16fb773.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.773c977c.css",
+    "static/js/main.d16fb773.js"
+  ]
+}
