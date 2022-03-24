@@ -87,6 +87,11 @@ function App() {
       setDir(null);
     }
   }, [state])
+
+  useState(()=>{
+    console.log("cld");
+    localStorage.setItem("arr", JSON.stringify([]));
+  },[])
   
   return (
     <div className="App">
