@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/elavatorSimulation/static/css/main.773c977c.css",
-    "main.js": "/elavatorSimulation/static/js/main.d16fb773.js",
+    "main.js": "/elavatorSimulation/static/js/main.90d6191a.js",
     "index.html": "/elavatorSimulation/index.html",
     "main.773c977c.css.map": "/elavatorSimulation/static/css/main.773c977c.css.map",
-    "main.d16fb773.js.map": "/elavatorSimulation/static/js/main.d16fb773.js.map"
+    "main.90d6191a.js.map": "/elavatorSimulation/static/js/main.90d6191a.js.map"
   },
   "entrypoints": [
     "static/css/main.773c977c.css",
-    "static/js/main.d16fb773.js"
+    "static/js/main.90d6191a.js"
   ]
 }
